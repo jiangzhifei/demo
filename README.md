@@ -42,7 +42,7 @@ pubKey-拉卡拉跨境支付平台下发公钥
 
 ```java
 
-		SubmitOrderReq req = new SubmitOrderReq();
+	SubmitOrderReq req = new SubmitOrderReq();
         req.setCardNo("6222021001116245702");
         req.setBgUrl("http://baidu.com");
         req.setBusiCode(CrossBorderBizType.STUDY_ABROAD_YEAR_BELOW.getCode());
@@ -77,15 +77,15 @@ pubKey-拉卡拉跨境支付平台下发公钥
         head.setMerId(LklCrossPayEnv.getEnvConfig().getMerId());
         head.setPayTypeId("1");
 
-        SubmitOrderRes res = payClient.submitOrder(req, head);```
+        SubmitOrderRes res = payClient.submitOrder(req, head);
+        ```
 
 
 ### 确认支付
 
 
 ```java
-
-		PaymentReq payOrder = new PaymentReq();
+	PaymentReq payOrder = new PaymentReq();
         payOrder.setMerOrderId("SH20160420194552");
         payOrder.setOrderAmount("223123.09");
         payOrder.setCurrency(LklCurrency.CNY.getCode());
@@ -98,4 +98,5 @@ pubKey-拉卡拉跨境支付平台下发公钥
         head.setTs(DateUtil.getCurrentTime());
         head.setReqType("B0003");
         head.setMerId(LklCrossPayEnv.getEnvConfig().getMerId());
-        PaymentRes res = payClient.pay(payOrder, head);```
+        PaymentRes res = payClient.pay(payOrder, head);
+        ```
