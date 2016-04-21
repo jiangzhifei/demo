@@ -78,11 +78,9 @@ pubKey-拉卡拉跨境支付平台下发公钥
         head.setPayTypeId("1");
 
         SubmitOrderRes res = payClient.submitOrder(req, head);
-        ```
-
-
+```
+---
 ### 确认支付
-
 
 ```java
 	PaymentReq payOrder = new PaymentReq();
@@ -99,4 +97,4 @@ pubKey-拉卡拉跨境支付平台下发公钥
         head.setReqType("B0003");
         head.setMerId(LklCrossPayEnv.getEnvConfig().getMerId());
         PaymentRes res = payClient.pay(payOrder, head);
-        ```
+```
